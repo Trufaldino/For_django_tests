@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+  <head>    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+  </head>
+<title>
+  {% block title %}
+      title
+  {% endblock %}
+</title>
+</head>
+<body>
+  <main> 
+    {% block content %}
+    <table class="table table-hover table-bordered">
+      <thead>
+        <tr>
+          <th>atrubute</th>
+          <th>info</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>scheme</td>
+          <td>{{ scheme }}</td>
+        </tr>
+        <tr>
+          <td>body</td>
+          <td>{{ body }}</td>
+        </tr>
+        <tr>
+          <td>patd</td>
+          <td>{{ path }}</td>
+        </tr>
+        <tr>
+          <td>path_info</td>
+          <td>{{ path_info }}</td>
+        </tr>
+        <tr>
+          <td>method</td>
+          <td>{{ method }}</td>
+        </tr>
+        <tr>
+          <td>encoding</td>
+          <td>{{ encoding }}</td>
+        </tr>
+        <tr>
+          <td>content_type</td>
+          <td>{{ content_type }}</td>
+        </tr>
+        <tr>
+          <td>GET</td>
+          <td>{{ GET }}</td>
+        </tr>
+        <tr>
+          <td>POST</td>
+          <td>{{ POST }}</td>
+        </tr>
+        <tr>
+          <td>COOKIES</td>
+          <td>{{ COOKIES }}</td>
+        </tr>
+        <tr>
+          <td>FILES</td>
+          <td>{{ FILES }}</td>
+        </tr>
+        <tr>
+          <td>META</td>
+          <td>{{ META }}</td>
+        </tr>
+        <tr>
+          <td>headers</td>
+          <td>{{ headers }}</td>
+        </tr>
+        <tr>
+          <td>resolver_match</td>
+          <td>{{ resolver_match }}</td>
+        </tr>
+        <tr>
+          <td>session</td>
+          <td>{{ session }}</td>
+        </tr>
+      </tbody>
+    </table>
+    {% endblock %}
+  </main>       
+  {% comment %} <footer class="border-top text-center py-3">
+  </footer> {% endcomment %}
+</body>
